@@ -12,14 +12,14 @@ RSpec.describe Turn do
   describe '#initialize' do
     it 'returns a Card' do
       card = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
-      turn = Turn.new("Juneau", card)
+      turn = Turn.new(card, "Juneau")
 
       expect(turn.card).to eq (card)
     end
 
     it 'returns a guess' do
       card = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
-      turn = Turn.new("Juneau", card)
+      turn = Turn.new(card, "Juneau")
 
       expect(turn.guess).to eq ("Juneau")
     end
@@ -29,7 +29,7 @@ RSpec.describe Turn do
   describe '#correct?' do
     it 'returns a boolean indicating if the guess matched the answer on the Card' do
       card = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
-      turn = Turn.new("Juneau", card)
+      turn = Turn.new(card, "Juneau")
 
       expect(turn.correct?).to eq true
     end
@@ -38,7 +38,7 @@ RSpec.describe Turn do
   describe '#feedback' do 
     it 'returns "Correct!" or "Incorrect." based on whether the guess was correct or not.' do
       card = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
-      turn = Turn.new("Juneau", card)
+      turn = Turn.new(card, "Juneau")
 
       turn.correct?
       
