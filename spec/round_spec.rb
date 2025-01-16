@@ -49,6 +49,7 @@ RSpec.describe Round do
       round = Round.new(deck)
 
       expect(round.current_card).to eq (card_1)
+      expect(round.current_card).to eq (card_2)
     end
   end
   
