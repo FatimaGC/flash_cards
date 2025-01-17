@@ -12,6 +12,6 @@ class Round
   end
 
   # def take_turn(guess)
-
+  #   new_turn = Turn.new(current_card, guess)
   # end
 end
