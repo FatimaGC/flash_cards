@@ -11,7 +11,7 @@ class Round
     @deck.cards.shift
   end
 
-  # def take_turn(guess)
-  #   new_turn = Turn.new(current_card, guess)
-  # end
+  def take_turn(guess)
+    Turn.new(current_card, guess)
+  end
 end
