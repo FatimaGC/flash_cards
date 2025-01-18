@@ -8,7 +8,7 @@ class Round
   end
 
   def current_card
-    @deck.cards.shift
+      @deck.cards.first
   end
 
   def take_turn(guess)
