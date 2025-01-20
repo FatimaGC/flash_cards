@@ -34,6 +34,14 @@ class Round
   end
 
   def number_correct_by_category(category)
-    @turns.filter {|turn| turn.card.category == category}.count
+    #For the category Geography, how many correct answers are there?
+    #Compare the category to the data in turns and return that number
+    correct_guesses = @turns.filter {|turn| turn.correct?}
+
+    correct_guesses.filter {|turn| turn.card.category == category}.count
+  end
+
+  def percent_correct 
+    (number_correct / @turns.count) * 100
   end
 end
