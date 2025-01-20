@@ -32,4 +32,8 @@ class Round
     #REFACTORED
     @turns.filter {|turn| turn.correct?}.count
   end
+
+  def number_correct_by_category(category)
+    @turns.filter {|turn| turn.card.category == category}.count
+  end
 end
