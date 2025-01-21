@@ -152,7 +152,7 @@ RSpec.describe Round do
       turn_1 = round.take_turn("Juneau")      
       turn_2 = round.take_turn("Venus")
 
-      expect(round.percent_correct_by_category).to eq 100.0
+      expect(round.percent_correct_by_category(category)).to eq 100.0
     end
   end
 end
