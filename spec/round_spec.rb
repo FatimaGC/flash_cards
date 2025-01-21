@@ -92,7 +92,7 @@ RSpec.describe Round do
 
       expect(round.current_card).to eq (card_1)
 
-      new_turn = round.take_turn("Juneau")
+      round.take_turn("Juneau")
 
       expect(round.current_card).to eq (card_2)
     end
@@ -106,7 +106,8 @@ RSpec.describe Round do
   
       deck = Deck.new([card_1, card_2, card_3])
       round = Round.new(deck)
-      new_turn = round.take_turn("Juneau")
+
+      round.take_turn("Juneau")
 
       expect(round.number_correct).to eq 1
     end
@@ -120,7 +121,8 @@ RSpec.describe Round do
   
       deck = Deck.new([card_1, card_2, card_3])
       round = Round.new(deck)
-      new_turn = round.take_turn("Juneau")
+      
+      round.take_turn("Juneau")
 
       expect(round.number_correct_by_category(:Geography)).to eq 1
     end
@@ -134,8 +136,9 @@ RSpec.describe Round do
   
       deck = Deck.new([card_1, card_2, card_3])
       round = Round.new(deck)
-      turn_1 = round.take_turn("Juneau")      
-      turn_2 = round.take_turn("Venus")
+
+      round.take_turn("Juneau")      
+      round.take_turn("Venus")
 
       expect(round.percent_correct).to eq 50.0
     end
@@ -149,8 +152,9 @@ RSpec.describe Round do
   
       deck = Deck.new([card_1, card_2, card_3])
       round = Round.new(deck)
-      turn_1 = round.take_turn("Juneau")      
-      turn_2 = round.take_turn("Venus")
+
+      round.take_turn("Juneau")      
+      round.take_turn("Venus")
 
       expect(round.percent_correct_by_category(:Geography)).to eq 100.0
     end
