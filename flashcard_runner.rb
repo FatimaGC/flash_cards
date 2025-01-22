@@ -13,39 +13,64 @@ deck = Deck.new([card_1, card_2, card_3, card_4])
 round = Round.new(deck)
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # def start
-  total_number_of_cards = round.deck.count
+#   puts "Welcome! You're playing with #{round.deck.count} cards."
+#   count = 1
 
-  puts welcome = "Welcome! You're playing with #{round.deck.count} cards."
-  count = 1
+#   while !round.deck.cards.empty? do
+#     puts "This is card number #{count} out of #{round.deck.count}." 
 
-  while !round.deck.cards.empty? do
-    puts "This is card number #{count} out of #{total_number_of_cards}." 
+#     puts "Question: #{round.current_card.question}"
 
-    puts "Question: #{round.current_card.question}"
+#     guess = gets.to_i
 
-    guess = gets.to_i
+#     round.take_turn(guess)
 
-    round.take_turn(guess)
-
-    count += 1
-
-    puts round.turns.turn.feedback
-
-    # puts "#{round.turns}"
-  end
-  
+#     #How do I access the feedback?
+    
+#     count += 1
+#   end
 # end
 
+# start()
 
-# #FIRST CARD 
-
-
-
-
-# round.take_turn(guess)
-
-# puts "#{round.turns[0].feedback}"
 
 
 
