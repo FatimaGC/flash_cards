@@ -9,7 +9,7 @@ def start
   card_1 = Card.new("What is 5 + 5?", 10, :STEM)
   card_2 = Card.new("What is Rachel's favorite animal?", "dog", :Turing_staff)
   card_3 = Card.new("What is Mike's middle name?", "nobody knows", :Turing_staff)
-  card_4 = Card.new("What cardboard cutout lives at Turing?", "Justin Bieber", :Turing_staff)
+  card_4 = Card.new("What cardboard cutout lives at Turing?", "Justin Bieber", :Pop_culture)
 
   deck = Deck.new([card_1, card_2, card_3, card_4])
 
@@ -53,6 +53,16 @@ def start
   puts "****** Game over! ******"
 
   puts "You had #{round.number_correct} correct guesses out of #{total_number_of_cards} for a total score of #{format("%.0f%%", round.percent_correct)}."
+
+    #Output:
+      #STEM - 100% correct
+      puts "STEM - #{format("%.0f%%", round.percent_correct_by_category(:STEM))} correct"
+
+      #Turing Staff - 50% correct
+      puts "Turing Staff - #{format("%.0f%%", round.percent_correct_by_category(:Turing_staff))} correct"
+
+      #Pop Culture - 100% correct
+      puts "Pop Culture - #{format("%.0f%%", round.percent_correct_by_category(:Pop_culture))} correct"
 end
 
 start()
