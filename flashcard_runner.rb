@@ -33,11 +33,7 @@ def start
     puts "Question: #{round.current_card.question}"
 
     #GET user input (guess)
-    require 'pry'; binding.pry
     guess = gets.chomp #Need to make sure this handles integers and strings so the comparison is correct.
-
-    #The answer to the first question is an integer, but gets always takes in a value as a string. 
-    #Change from a string into an integer
 
     #Call take_turn method which does the following:
       #Takes in the guess
@@ -53,6 +49,10 @@ def start
 
     index += 1
   end
+
+  puts "****** Game over! ******"
+
+  puts "You had #{round.number_correct} correct guesses out of #{total_number_of_cards} for a total score of #{format("%.0f%%", round.percent_correct)}."
 end
 
 start()
