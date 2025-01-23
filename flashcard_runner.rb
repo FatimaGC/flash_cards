@@ -33,7 +33,11 @@ def start
     puts "Question: #{round.current_card.question}"
 
     #GET user input (guess)
+    require 'pry'; binding.pry
     guess = gets.chomp #Need to make sure this handles integers and strings so the comparison is correct.
+
+    #The answer to the first question is an integer, but gets always takes in a value as a string. 
+    #Change from a string into an integer
 
     #Call take_turn method which does the following:
       #Takes in the guess

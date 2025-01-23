@@ -9,7 +9,8 @@ class Turn
   end
 
   def correct?
-    @card.answer == @guess
+    # @card.answer == @guess
+    @guess == @card.answer || @guess.to_i == @card.answer
   end
 
   def feedback
